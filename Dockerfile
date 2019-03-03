@@ -14,7 +14,7 @@ ENV ENCODE_RESOLUTION 1920x1080
 ENV ENCODE_PRESET superfast
 ENV ENCODE_VIDEO_PROFILE baseline
 
-ENV RESTREAM_URL rtmp://localhost:1935/stream/restreamed;
+ENV RESTREAM_URL rtmp://localhost:1935/stream/restreamed
 
 COPY init.sh /init.sh
 COPY nginx.conf.template /nginx.conf.template

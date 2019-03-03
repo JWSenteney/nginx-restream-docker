@@ -10,4 +10,7 @@ envsubst '${ENCODE_AUDIO_CODEC},
          ${ENCODE_PRESET},
          ${ENCODE_VIDEO_PROFILE},
          ${RESTREAM_URL}' < nginx.conf.template > /opt/nginx/nginx.conf
+
+echo "nginx.conf file being used is..."
+cat /opt/nginx/nginx.conf
 /opt/nginx/sbin/nginx
