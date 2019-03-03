@@ -20,12 +20,12 @@ rtmp {
                         -c:v ${ENCODE_VIDEO_ENCODER}
                         -b:v ${ENCODE_VIDEO_BITRATE}
                         -f ${ENCODE_FORMAT}
-                        -g ${ENCODE_G}
+                        -g ${ENCODE_KEYFRAME_INTERVAL}
                         -r ${ENCODE_FRAMERATE}
                         -s ${ENCODE_RESOLUTION}
                         -preset ${ENCODE_PRESET}
                         -profile:v ${ENCODE_VIDEO_PROFILE}
-                        ${RESTREAM_URL};
+                        ${ENCODE_EXTRA_OPTIONS} ${RESTREAM_URL};
         }
 
         application restream {
