@@ -25,7 +25,7 @@ rtmp {
                         -s ${ENCODE_RESOLUTION}
                         -preset ${ENCODE_PRESET}
                         -profile:v ${ENCODE_VIDEO_PROFILE}
-                        ${ENCODE_EXTRA_OPTIONS} ${RESTREAM_URL};
+                        ${ENCODE_EXTRA_OPTIONS} ${ENCODE_PUSH_URL};
         }
 
         application restream {

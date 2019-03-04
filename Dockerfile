@@ -15,6 +15,7 @@ ENV ENCODE_PRESET superfast
 ENV ENCODE_VIDEO_PROFILE baseline
 #ENV ENCODE_EXTRA_OPTIONS -- blank by default
 
+ENV ENCODE_PUSH_URL rtmp://localhost:1935/stream/encoded
 ENV RESTREAM_URL rtmp://localhost:1935/stream/restreamed
 
 COPY init.sh /init.sh
