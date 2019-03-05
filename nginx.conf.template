@@ -14,7 +14,7 @@ rtmp {
         application transcode {
             live on;
 
-            exec ffmpeg -i rtmp://localhost:1935/transcode/$name
+            exec ffmpeg -i "rtmp://localhost:1935/transcode/$name"
                         -c:a ${ENCODE_AUDIO_CODEC}
                         -b:a ${ENCODE_AUDIO_BITRATE}
                         -c:v ${ENCODE_VIDEO_ENCODER}
@@ -25,7 +25,7 @@ rtmp {
                         -s ${ENCODE_RESOLUTION}
                         -preset ${ENCODE_PRESET}
                         -profile:v ${ENCODE_VIDEO_PROFILE}
-                        ${ENCODE_EXTRA_OPTIONS} ${ENCODE_PUSH_URL};
+                        ${ENCODE_EXTRA_OPTIONS} "${ENCODE_PUSH_URL}";
         }
 
         application restream {
